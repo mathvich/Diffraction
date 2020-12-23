@@ -4,5 +4,7 @@ Consists simple example of physics calculations (integral of brightness with com
 
 built on Qt Creator 5.5.1
 
-Math: class ** rainbow **
-Graph: class ** plotWidget **
+## Math:
+class rainbow
+## Graph:
+class plotWidget
