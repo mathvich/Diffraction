@@ -8,3 +8,5 @@ built on Qt Creator 5.5.1
 class rainbow
 ## Graph:
 class plotWidget
+
+![Screenshot](diff.PNG "Diffraction of green light on two slits")
