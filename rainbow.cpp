@@ -9,8 +9,6 @@ rainbow::rainbow(QWidget *parent) : QWidget(parent)
     ReplotTimer->setInterval(250);
     connect(ReplotTimer, SIGNAL(timeout()), this, SLOT(timer()));
 
-
-
     LeftHole = false;
     RightHole = false;
 
@@ -108,12 +106,8 @@ double rainbow::getIntensity(double y)
     double answRe = 0.0;     // integral intensity
     double answIm = 0.0;
 
-    for (int i=1; i<=2; ++i)
     {
-        int jndex = int(i/2)*sign;
-        sign *= -1;
-
-        if ((LeftHole) && (i == 1))
+        if (LeftHole)
         {
             double x = -Period/2.0 - xMax/2.0;
             while (x < -Period/2.0 + xMax/2.0)
@@ -125,7 +119,7 @@ double rainbow::getIntensity(double y)
             }
         }
 
-        if ((RightHole) && (i == 2))
+        if (RightHole)
         {
             double x = Period/2.0 - xMax/2.0;
             while (x < Period/2.0 + xMax/2.0)
